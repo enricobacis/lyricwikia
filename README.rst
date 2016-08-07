@@ -1,7 +1,7 @@
 lyricwikia
 ==========
 
-Python API to get song lyric from `LyricWikia`_
+Python API to get song lyrics from `LyricWikia`_
 
 Usage
 -----
