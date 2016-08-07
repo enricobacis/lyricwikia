@@ -4,7 +4,7 @@ with open('README.rst') as README:
     long_description = README.read()
 
 setup(name='lyricwikia',
-      version='0.1.0',
+      version='0.1.1',
       description='LyricWikia API for song lyrics',
       long_description=long_description,
       install_requires=[

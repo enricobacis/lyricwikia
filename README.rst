@@ -3,6 +3,23 @@ lyricwikia
 
 Python API to get song lyrics from `LyricWikia`_
 
+
+Installation
+------------
+
+``lyricwikia`` is on `PyPI`_, so you can install it using pip:
+
+.. code::
+
+    pip install lyricwikia
+
+Otherwise download this repository and use the ``setup.py`` file:
+
+.. code::
+
+    python setup.py install
+
+
 Usage
 -----
 
@@ -44,3 +61,4 @@ officially already provided by the official APIs): ``get_lyrics``.
 
 
 .. _LyricWikia: http://lyrics.wikia.com/
+.. _PyPI: http://lyrics.wikia.com/
