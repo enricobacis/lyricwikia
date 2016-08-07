@@ -21,4 +21,4 @@ def get_lyrics(artist, song, linesep='\n'):
         raise Exception('Cannot download lyrics')
     for br in lyricbox.findAll('br'):
         br.replace_with(linesep)
-    return lyricbox.text.strip().encode('utf-8')
+    return lyricbox.text.strip()
