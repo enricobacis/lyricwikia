@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 
 from argparse import ArgumentParser
-from lyricwikia import get_lyrics
-
+from lyricwikia import get_lyrics, __version__
 
 def main():
     """Main method"""
@@ -10,6 +9,7 @@ def main():
     parser.add_argument('ARTIST', type=str, help='Artist name')
     parser.add_argument('SONG', type=str, help='Song title')
     parser.add_argument('--separator', default='\n', help='line separator')
+    parser.add_argument('--version', action='version', version=__version__)
     args = parser.parse_args()
 
     try:

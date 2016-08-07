@@ -1,10 +1,12 @@
 from setuptools import setup
 
+exec(open('lyricwikia/version.py').read())
+
 with open('README.rst') as README:
     long_description = README.read()
 
 setup(name='lyricwikia',
-      version='0.1.2',
+      version=__version__,
       description='LyricWikia API for song lyrics',
       long_description=long_description,
       install_requires=[

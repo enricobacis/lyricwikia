@@ -1,3 +1,4 @@
 from .lyricwikia import get_lyrics
+from .version import __version__
 
-__all__ = ['get_lyrics']
+__all__ = ['__version__', 'get_lyrics']
