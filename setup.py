@@ -4,6 +4,7 @@ exec(open('lyricwikia/version.py').read())
 
 with open('README.rst') as README:
     long_description = README.read()
+    long_description = long_description[long_description.index('Description'):]
 
 setup(name='lyricwikia',
       version=__version__,
