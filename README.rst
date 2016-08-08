@@ -25,7 +25,7 @@ Usage
 
 You can use the ``lyrics`` command to look for a song lyrics.
 
-    usage: lyrics [-h] [--separator SEPARATOR] ARTIST SONG
+    usage: lyrics [-h] [--separator SEPARATOR] [--version] ARTIST SONG
 
     Get lyrics of a song from LyricWikia
 
@@ -35,7 +35,9 @@ You can use the ``lyrics`` command to look for a song lyrics.
 
     optional arguments:
       -h, --help            show this help message and exit
-      --separator SEPARATOR line separator
+      --separator SEPARATOR
+                            line separator
+      --version             show program's version number and exit
 
 
 Example
