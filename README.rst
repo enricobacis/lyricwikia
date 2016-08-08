@@ -62,5 +62,5 @@ officially already provided by the official APIs): ``get_lyrics``.
     lyrics = lyricwikia.get_lyrics('Led Zeppelin', 'Stairway to heaven')
 
 
-.. _LyricWikia: http://lyrics.wikia.com/
-.. _PyPI: http://lyrics.wikia.com/
+.. _LyricWikia: http://lyrics.wikia.com
+.. _PyPI: https://pypi.python.org/pypi/lyricwikia
