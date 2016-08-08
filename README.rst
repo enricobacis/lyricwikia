@@ -1,13 +1,24 @@
 lyricwikia
 ==========
 
-Python API to get song lyrics from `LyricWikia`_
+*Python API to get song lyrics from `LyricWikia`_*
+
+
+Description
+-----------
+
+`LyricWikia`_ is an online wiki-based lyrics database and encyclopedia.
+It used to provide full access to song lyrics via API, but the service
+has been discontinued.
+
+This API scrapes the song web page and returns the lyrics. Please verify
+that your use complies with the `LyricWikia`_ terms of service.
 
 
 Installation
 ------------
 
-``lyricwikia`` is on `PyPI`_, so you can install it using pip:
+The package ``lyricwikia`` is on `PyPI`_, so you can install it using pip:
 
 .. code::
 
