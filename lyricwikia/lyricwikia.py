@@ -41,6 +41,9 @@ class Song(object):
     def __str__(self):
         return "Song(artist='%s', title='%s')" % (self.artist, self.title)
 
+    def __repr__(self):
+        return str(self)
+
 
 class Album(object):
     """An Album backed by the LyricWikia API"""
@@ -53,6 +56,9 @@ class Album(object):
 
     def __str__(self):
         return "Album(artist='%s', title='%s')" % (self.artist, self.title)
+
+    def __repr__(self):
+        return str(self)
 
 
 class Artist(object):
@@ -68,3 +74,6 @@ class Artist(object):
 
     def __str__(self):
         return "Artist(name='%s')" % (self.name)
+
+    def __repr__(self):
+        return str(self)
