@@ -3,6 +3,13 @@ import requests
 
 __BASE_URL__ = 'http://lyrics.wikia.com'
 
+
+class LyricsNotFound(Exception):
+    __module__ = Exception.__module__
+    def __init__(self, message=None):
+        super(LyricsNotFound, self).__init__(message)
+
+
 def urlize(string):
     """Convert string to LyricWikia format"""
     return '_'.join(string.title().split())
@@ -12,15 +19,15 @@ def create_url(artist, song):
     return __BASE_URL__ + '/wiki/{artist}:{song}'.format(
             artist=urlize(artist), song=urlize(song))
 
-def get_lyrics(artist, song, linesep='\n'):
+def get_lyrics(artist, song, linesep='\n', timeout=None):
     """Retrieve the lyrics of the song"""
     url = create_url(artist, song)
-    response = requests.get(url)
+    response = requests.get(url, timeout=timeout)
     soup = BeautifulSoup(response.content, "html.parser")
     lyricbox = soup.find('div', {'class': 'lyricbox'})
 
     if not lyricbox:
-        raise Exception('Cannot download lyrics')
+        raise LyricsNotFound('Cannot download lyrics')
     for br in lyricbox.findAll('br'):
         br.replace_with(linesep)
     return lyricbox.text.strip()
