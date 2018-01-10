@@ -1,5 +1,5 @@
-from bs4 import BeautifulSoup
-import requests
+from bs4 import BeautifulSoup as _BeautifulSoup
+import requests as _requests
 
 __BASE_URL__ = 'https://lyrics.wikia.com'
 
@@ -26,8 +26,8 @@ def create_url(artist, song):
 def get_lyrics(artist, song, linesep='\n', timeout=None):
     """Retrieve the lyrics of the song"""
     url = create_url(artist, song)
-    response = requests.get(url, timeout=timeout)
-    soup = BeautifulSoup(response.content, "html.parser")
+    response = _requests.get(url, timeout=timeout)
+    soup = _BeautifulSoup(response.content, "html.parser")
     lyricbox = soup.find('div', {'class': 'lyricbox'})
 
     if not lyricbox:
@@ -79,7 +79,7 @@ class Artist(object):
 
     def __init__(self, name):
         url = self.__API__.format(artist=urlize(name))
-        data = requests.get(url).json()
+        data = _requests.get(url).json()
         self.name = data['artist']
         self.albums = [Album(self.name, album) for album in data['albums']]
 
