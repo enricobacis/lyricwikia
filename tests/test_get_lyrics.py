@@ -11,7 +11,6 @@ def test_returnLyrics():
                   body=('<div class="lyricbox">thank<br/>you.</div>'))
 
     lyrics = get_lyrics("Lyricwikia", "Lyricwikia")
-    print repr(lyrics)
     assert len(responses.calls) == 1
     assert lyrics == "thank\nyou."
 
