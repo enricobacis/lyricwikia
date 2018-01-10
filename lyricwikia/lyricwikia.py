@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-__BASE_URL__ = 'http://lyrics.wikia.com'
+__BASE_URL__ = 'https://lyrics.wikia.com'
 
 
 class LyricsNotFound(Exception):
