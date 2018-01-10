@@ -3,6 +3,9 @@ lyricwikia
 
 Python API to get song lyrics from `LyricWikia`_
 
+.. image:: https://travis-ci.org/enricobacis/lyricwikia.svg?branch=master
+    :target: https://travis-ci.org/enricobacis/lyricwikia
+
 
 Description
 -----------
