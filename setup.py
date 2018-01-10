@@ -19,5 +19,4 @@ setup(name='lyricwikia',
       setup_requires=['pytest-runner'],
       install_requires=['beautifulsoup4', 'requests'],
       tests_require=['pytest', 'responses'],
-      keywords='lyricwikia lyric lyrics wikia song api'
-)
+      keywords='lyricwikia lyric lyrics wikia song api')

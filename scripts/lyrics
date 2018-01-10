@@ -3,6 +3,7 @@
 from argparse import ArgumentParser
 from lyricwikia import get_lyrics, __version__
 
+
 def main():
     """Main method"""
     parser = ArgumentParser(description='Get lyrics of a song from LyricWikia')
@@ -16,6 +17,7 @@ def main():
         print(get_lyrics(args.ARTIST, args.SONG, args.separator))
     except Exception as e:
         print('ERROR: %s' % str(e))
+
 
 if __name__ == '__main__':
     main()
