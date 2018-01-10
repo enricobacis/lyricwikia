@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 from argparse import ArgumentParser
-from lyricwikia import get_lyrics, __version__
+from lyricwikia import get_all_lyrics, __version__
 
 
 def main():
@@ -14,7 +14,8 @@ def main():
     args = parser.parse_args()
 
     try:
-        print(get_lyrics(args.ARTIST, args.SONG, args.separator))
+        for lyrics in get_all_lyrics(args.ARTIST, args.SONG, args.separator):
+            print(lyrics)
     except Exception as e:
         print('ERROR: %s' % str(e))
 
