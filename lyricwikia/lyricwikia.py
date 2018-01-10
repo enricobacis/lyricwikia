@@ -6,6 +6,7 @@ __BASE_URL__ = 'https://lyrics.wikia.com'
 
 class LyricsNotFound(Exception):
     __module__ = Exception.__module__
+
     def __init__(self, message=None):
         super(LyricsNotFound, self).__init__(message)
 
@@ -14,10 +15,13 @@ def urlize(string):
     """Convert string to LyricWikia format"""
     return '_'.join(string.title().split())
 
+
 def create_url(artist, song):
     """Create the URL in the LyricWikia format"""
-    return __BASE_URL__ + '/wiki/{artist}:{song}'.format(
-            artist=urlize(artist), song=urlize(song))
+    return (__BASE_URL__ +
+            '/wiki/{artist}:{song}'.format(artist=urlize(artist),
+                                           song=urlize(song)))
+
 
 def get_lyrics(artist, song, linesep='\n', timeout=None):
     """Retrieve the lyrics of the song"""
