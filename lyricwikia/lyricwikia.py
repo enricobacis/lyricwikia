@@ -1,3 +1,4 @@
+from six.moves.urllib.parse import quote as _quote
 from bs4 import BeautifulSoup as _BeautifulSoup
 import requests as _requests
 
@@ -13,7 +14,7 @@ class LyricsNotFound(Exception):
 
 def urlize(string):
     """Convert string to LyricWikia format"""
-    return '_'.join(string.title().split())
+    return _quote('_'.join(string.title().split()))
 
 
 def create_url(artist, song):
