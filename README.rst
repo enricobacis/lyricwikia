@@ -67,8 +67,18 @@ Example
 API
 ---
 
-At the moment ``lyricwikia`` is composed by a single API (the one that is not
-officially already provided by the official APIs): ``get_lyrics``.
+At the moment ``lyricwikia`` provides two APIs that are not officially already
+provided by the official APIs):
+
+- ``get_lyrics(artist, song, linesep='\n', timeout=None)``: returns a string
+    that contains the lyrics of the song as provided by LyricWikia. If the
+    lyrics is not found, the ``LyricsNotFound`` exception is raised.
+  
+- ``get_all_lyrics(artist, song, linesep='\n', timeout=None)``: returns a list
+  of all the lyrics versions of the song (e.g., both the *kanji* and the
+  *romaji* versions if available).  If the lyrics is not found, the
+  ``LyricsNotFound`` exception is raised.
+
 
 .. code:: python
 
