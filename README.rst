@@ -86,5 +86,12 @@ provided by the official APIs):
     lyrics = lyricwikia.get_lyrics('Led Zeppelin', 'Stairway to heaven')
 
 
+Used by
+-------
+
+- `spotify-downloader`_: download Spotify playlists with albumart and meta-tags
+
+
 .. _LyricWikia: http://lyrics.wikia.com
 .. _PyPI: https://pypi.python.org/pypi/lyricwikia
+.. _spotify-downloader: https://github.com/ritiek/spotify-downloader
