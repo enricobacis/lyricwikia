@@ -33,6 +33,8 @@ Otherwise download this repository and use the ``setup.py`` file:
 
     python setup.py install
 
+It is also avaliable on the AUR for Arch Linux users: `python-lyricwikia`_
+
 
 Usage
 -----
@@ -90,8 +92,11 @@ Used by
 -------
 
 - `spotify-downloader`_: download Spotify playlists with albumart and meta-tags
+- `spotify-music-videos`_: watch Youtube music videos (and lyrics) for the currently playing Spotify songs
 
 
 .. _LyricWikia: http://lyrics.wikia.com
 .. _PyPI: https://pypi.python.org/pypi/lyricwikia
 .. _spotify-downloader: https://github.com/ritiek/spotify-downloader
+.. _python-lyricwikia: https://aur.archlinux.org/packages/python-lyricwikia/
+.. _spotify-music-videos: https://github.com/marioortizmanero/spotify-music-videos
